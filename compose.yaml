@@ -1,0 +1,11 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    container_name: 'tenaday-be'
+    environment:
+      - 'MYSQL_DATABASE=tenaday'
+      - 'MYSQL_PASSWORD=testtest'
+      - 'MYSQL_ROOT_PASSWORD=testtest'
+      - 'MYSQL_USER=bcm'
+    ports:
+      - '3306:3306'
