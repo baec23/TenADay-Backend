@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api/v1/quiz")
 class VocabQuizController(private val vocabQuizService: VocabQuizService) {
     @GetMapping("/english")
-    fun getRandomEnglishVocabQuizQuestion(): ResponseEntity<EnglishVocabQuizQuestion> {
+    suspend fun getRandomEnglishVocabQuizQuestion(): ResponseEntity<EnglishVocabQuizQuestion> {
         return ResponseEntity.ok(vocabQuizService.generateEnglishVocabQuizQuestion(3))
     }
 
